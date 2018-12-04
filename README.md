@@ -1,5 +1,4 @@
 # Plantilla TFG/TFM
-**Para ver la información del póster haz clic <a href="https://github.com/jmrplens/TFG-TFM_EPS/wiki/P%C3%B3ster">aquí</a>.**
 
 **Ejemplo real de TFG y póster:  <a href="http://jmrplens.com/GitHub_TFGTemplate/TFG+Poster.zip">Descargar proyecto LaTeX</a>**
 
@@ -95,53 +94,6 @@ Se mostraría esto (haz clic sobre la imagen para verla más grande):
 
 Estilo de página par e impar o página izquierda y página derecha.
 
-### Multitud de diseños predefinidos
-La plantilla incluye los colores y logotipos que cada titulación determina para los TFG y TFM. Tan solo con cambiar un número, automáticamente se modifica la información para la titulación seleccionada.
-La lista de titulaciónes prediseñadas a día de hoy (Enero 2018) son:
-
-| ID  | Titulación |
-| ------------- | ------------- |
-| `1`  | Grado en Imagen y Sonido en Telecomunicación  |
-| `2` | Grado en Ingeniería Civil  |
-| `3`  | Grado en Ingeniería Química  |
-| `4` | Grado en Ingeniería Informática  |
-| `5`  | Grado en Ingerniería Multimedia  |
-| `6` | Grado en Arquitectura Técnica  |
-| `7`  | Grado en Arquitectura  |
-| `8` | Grado en Ingeniería Robótica (falta definir color y logo)  |
-| `A`  | Máster Universitario en Telecomunicación  |
-| `B` | Máster Universitario en Ingeniería de Caminos, Canales y Puentes  |
-| `C`  | Máster Universitario en Gestión de la Edificación  |
-| `D` | Máster Universitario en Desarrollo de Aplicaciones y Servicios Web  |
-| `E`  | Máster Universitario en Ingeniería de los Materiales, Agua y Terreno  |
-| `F` | Máster Universitario en Ingeniería Informática  |
-| `G`  | Máster Universitario en Automática y Robótica  |
-| `H` | Máster Universitario en Prevención de Riesgos Laborales  |
-| `I`  | Máster Universitario en Gestión Sostenible y Tecnologías del Agua  |
-| `J` | Máster Universitario en Desarrollo de Software para Dispositivos Móviles  |
-| `K`  | Máster Universitario en Ingeniería Química  |
-
-El lugar donde indicar la `ID` de la titulación es en el archivo principal `TFG-TFM_EPS_UA.tex`, en la siguiente línea:
-
-```latex
-\def\IDtitulo{X} % INTRODUCE LA ID DE TU TITULACIÓN
-```
-Donde `X` es la ID de la titulación correspondiente.
-
-
-Los cambios en la plantilla al cambiar la `ID` suceden en la portada y en la subportada, estableciendo los logotipos correspondientes, color del texto, nombre de la titulación, tipo de trabajo (máster o grado).
-
-Por ejemplo, para la titulación con el `ID=1` se genera automáticamente esta portada y subportada
-
-<p align="center">
-<img src="http://jmrplens.com/GitHub_TFGTemplate/P1.png" width="30%"></img><img src="http://jmrplens.com/GitHub_TFGTemplate/PN1.png" width="30%"></img>
-</p>
-
-A continuación se muestran el resto de portadas que se pueden generar automáticamente:
-
-<p align="center">
-<img src="http://jmrplens.com/GitHub_TFGTemplate/P2.png" width="20%"></img> <img src="http://jmrplens.com/GitHub_TFGTemplate/P3.png" width="20%"></img> <img src="http://jmrplens.com/GitHub_TFGTemplate/P4.png" width="20%"></img> <img src="http://jmrplens.com/GitHub_TFGTemplate/P5.png" width="20%"></img> <img src="http://jmrplens.com/GitHub_TFGTemplate/P6.png" width="20%"></img> <img src="http://jmrplens.com/GitHub_TFGTemplate/P7.png" width="20%"></img> <img src="http://jmrplens.com/GitHub_TFGTemplate/PA.png" width="20%"></img> <img src="http://jmrplens.com/GitHub_TFGTemplate/PB.png" width="20%"></img> <img src="http://jmrplens.com/GitHub_TFGTemplate/PC.png" width="20%"></img> <img src="http://jmrplens.com/GitHub_TFGTemplate/PD.png" width="20%"></img> <img src="http://jmrplens.com/GitHub_TFGTemplate/PE.png" width="20%"></img> <img src="http://jmrplens.com/GitHub_TFGTemplate/PF.png" width="20%"></img> <img src="http://jmrplens.com/GitHub_TFGTemplate/PG.png" width="20%"></img> <img src="http://jmrplens.com/GitHub_TFGTemplate/PH.png" width="20%"></img> <img src="http://jmrplens.com/GitHub_TFGTemplate/PI.png" width="20%"></img> <img src="http://jmrplens.com/GitHub_TFGTemplate/PJ.png" width="20%"></img> <img src="http://jmrplens.com/GitHub_TFGTemplate/PK.png" width="20%"></img>
-</p>
 
 ### Fuente de texto
 
@@ -226,46 +178,6 @@ El contenido a modificar es el que se encuentra entre `{}`, siempre el último t
 `\newcommand{\miNombre}{Nombre Apellido1 Apellido2 (alumno)}` sólo se debe modificar el contenido dentro de los corchetes del último bloque qué es: `{Nombre Apellido1 Apellido2 (alumno)}`, y quedaría tal que: `\newcommand{\miNombre}{Jose Manuel Requena Plens}`
 
 Así con el resto de la información
-### Selecciona tu titulación
-En el mismo archivo, justo a continuación de la información del trabajo se debe indicar la titulación. En el código se muestra así:
-```latex
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% INDICA TU TITULACION
-% ID	GRADO -------------------------------------------------
-% 1		Ingeniería en Imagen y Sonido en Telecomunicación
-% 2		Ingeniería Civil
-% 3		Ingeniería Química
-% 4		Ingeniería Informática
-% 5		Ingeniería Multimedia
-% 6		Arquitectura Técnica
-% 7		Arquitectura
-% 8		Robótica
-% %		%%%%%%%%%%%%
-% ID	MÁSTER ------------------------------------------------
-% A		Telecomunicación
-% B		Caminos, Canales y Puertos
-% C		Gestión en la Edificación
-% D		Desarrollo Web
-% E		Materiales, Agua, Terreno
-% F		Informática
-% G 	Automática y Robótica
-% H		Prevención de riesgos laborales
-% I		Gestión Sostenible Agua
-% J		Desarrollo Aplicaciones Móviles
-% K		Ingeniería Química
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%%%
-																		%
-\def\IDtitulo{K} % INTRODUCE LA ID DE TU TITULACIÓN						%
-																		%
-%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-``` 
-
-Para indicar tu titulación tan solo debes editar el carácter contenido entre `{}` del último bloque. Por ejemplo, si tu trabajo es de Ingeniería en Imagen y Sonido en Telecomunicación, deberías editar la línea de código para indicar la ID de tu titulación, que en este caso es 1, del siguiente modo:
-`\def\IDtitulo{1} % INTRODUCE LA ID DE TU TITULACIÓN`
-
-Y listo, con este indicador ya estará tu trabajo prediseñado según las directrices de estilo de tu grado o máster.
 
 ### Contenido
 El contenido del trabajo se debe desarrollar en archivos separados, es una buena práctica. En el archivo principal de la plantilla (`TFG-TFM_EPS_UA.tex`) se encuentran las líneas que incluyen en el documento las portadas preconfiguradas, los diferentes capítulos, bibliografía y anexos.
@@ -558,54 +470,6 @@ También en el archivo `configuracioninicial.tex` el documento está configurado
 
 Las líneas que siguen a `\addto...` renombran algunos términos estándar para traducirlos al español. Si tu trabajo está en otro idioma cámbialos por el idioma del trabajo.
 
-### Añadir/Editar formato de titulaciones
-
-Si el color o logotipo de tu titulación ha cambiado, o tu titulación no se encuentra actualmente en la plantilla, en primer lugar ponte en contacto conmigo para que actualice la plantilla, y si no puedes esperar a la actualización puedes añadirlo tú del siguiente modo en el archivo `configuraciontitulacion.tex`
-
-El formato de una titulación se define después de comprobar el valor de la ID introducida en el archivo principal, por lo que si deseas actualizar tu titulación debes buscar donde el condicional comprueba tu ID. Esto lo realiza en esta línea:
-
-`\if\IDtitulo X`
-
-Donde 'X' es la ID de la titulación. 
-
-El condicional completo se compone de lo siguiente:
-```latex
-\if\IDtitulo 1 % Teleco
-		% Logos
-		\newcommand{\logoFacultadPortada}{include/logos-universidad/LogoEPSBlanco} % Logo EPS en portada
-		\newcommand{\logoGradoPortada}{include/logos-titulaciones/LogoTelecoBlanco} % Logo titulación en portada
-		\newcommand{\logoGrado}{include/logos-titulaciones/LogoTelecoNegro} % Logo titulación en subportada
-		% Texto
-		\newcommand{\miGrado}{Grado en Ingeniería en Sonido e Imagen en Telecomunicación} % Nombre de la titulación
-		\newcommand{\tipotrabajo}{Trabajo Fin de Grado} % Tipo de trabajo (grado o máster)
-		% Color
-		\newcommand{\colorgrado}{teleco} % Color de la portada. Definido al inicio del archivo
-		\newcommand{\colortexto}{blanco} % Color del texto de la portada (blanco o negro)
-```
-
-Si tu titulación ya está en la plantilla edita las líneas que hayan sido modificadas para tu titulación.
-
-Si tu titulación no está en la plantilla y deseas añadirla, debes añadirla al final del condicional, justo encima de la línea:
-
-`\fi \fi \fi \fi \fi \fi \fi \fi \fi \fi \fi \fi \fi \fi \fi \fi \fi \fi \fi`
-
-Encima de esta linea deberás agregar el condicional con la ID que llevará la titulación que vayas a añadir tal que:
-
-```latex
-\else \if\IDtitulo X % ID de tu titulación añadida
-% Logos
-		\newcommand{\logoFacultadPortada}{include/logos-universidad/LogoEPS____} % Logo EPS en portada (blanco o negro)
-		\newcommand{\logoGradoPortada}{include/logos-titulaciones/Logo_____} % Logo titulación en portada (blanco o negro)
-		\newcommand{\logoGrado}{include/logos-titulaciones/Logo____Negro} % Logo titulación en subportada (solo negro)
-		% Texto
-		\newcommand{\miGrado}{_____________} % Nombre de la titulación
-		\newcommand{\tipotrabajo}{Trabajo Fin de ______} % Tipo de trabajo (grado o máster)
-		% Color
-		\newcommand{\colorgrado}{_______} % Color de la portada. Definido al inicio del archivo
-		\newcommand{\colortexto}{_______} % Color del texto de la portada (blanco o negro)
-```
-
-Según el color de fuente de la portada (blanco o negro) deberás incluir en el mismo color el logotipo de la EPS (ya incluido en la plantilla tanto en negro como en blanco) y el logotipo de tu titulación. Para la subportada el logotipo de tu titulación debe ser negro obligatoriamente. Introduce el texto de tu grado y titulación correspondiente. Y por último define tu color de grado al inicio del archivo (en RGB) y añade el nombre del color definido, e indica si la fuente de texto de la portada es negro o blanco.
 
 ### Fuentes de la portada
 
