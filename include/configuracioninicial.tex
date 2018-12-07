@@ -57,7 +57,7 @@
 % BIBLIOGRAFÍA
 %%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{apacite} % NORMA APA
-\usepackage{natbib}
+\usepackage[numbers,sort]{natbib}
 \usepackage{breakcites}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -216,6 +216,7 @@
 % COMANDOS AÑADIDOS
 %%%%%%%%%%%%%%%%%%%%%%%%
 % Para mostrar la fecha actual (mes año) con \Hoy
+\newcommand{\DIA}{\number\day \space}
 \newcommand{\MES}{%
   \ifcase\month% 0
     \or Enero% 1
@@ -232,7 +233,7 @@
     \or Diciembre% 12
   \fi}
 \newcommand{\ANYO}{\number\year}
-\newcommand{\Hoy}{\MES\ \ANYO}
+\newcommand{\Hoy}{\DIA de \MES\ de \ANYO}
 
 %%%%%%%%%%%%%%%%%%%%%%%% 
 % MATEMÁTICAS

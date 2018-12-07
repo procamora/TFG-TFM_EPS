@@ -19,6 +19,7 @@
 \newcommand{\subtitulo}{Subtítulo del proyecto}
 % Datos del autor
 \newcommand{\miNombre}{Nombre Apellido1 Apellido2 (alumno)}
+\newcommand{\miDNI}{00000000A}
 \newcommand{\miEmail}{nombre@um.es}
 % Datos del tutor/es
 \newcommand{\miTutor}{Nombre Apellido1 Apellido2 (tutor1)}
@@ -30,81 +31,88 @@
 \newcommand{\miFacultadCorto}{FIUM}
 \newcommand{\miUniversidad}{\protect{Universidad de Murcia}}
 \newcommand{\miUbicacion}{Murcia}
-
+\newcommand{\firma}{include/firma}
 
 % Configuración automática según el identificador elegido
 \input{include/configuraciontitulacion} 
 
 % Información añadida a las propiedades del archivo PDF.
 \hypersetup{
-pdfauthor = {\miNombre~(\miEmail)},
-pdftitle = {\titulo},
+	pdfauthor = {\miNombre~(\miEmail)},
+	pdftitle = {\titulo},
 }
 
 %%
 % Archivo de acrónimos
 %%
 \makeglossaries % Genera la base de datos de acrónimos
-\input{anexos/acronimos.tex} % Archivo que contiene los acrónimos
+\input{anexos/_acronimos.tex} % Archivo que contiene los acrónimos
 
 %%%%%%%%%%%%%%%%%%%%%%%% 
 % INICIO DEL DOCUMENTO
 % A partir de aquí debes empezar a realizar tu TFG/TFM
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-
-% Números romanos hasta el mainmatter.
-\frontmatter
-
-% PORTADA
-\input{include/portada/portada_color} % Portada Color
-\input{include/portada/portada_bn} % Portada B/N
-
-%%%%% PREAMBULO
-% Incluye el .tex que contiene el preámbulo, agradecimientos y dedicatorias.
-\input{capitulos/preliminaresconagradecimientos} 
-
-% Incluye después del archivo anterior el indice y lista de figuras, tablas y códigos.
-\tableofcontents	% Índice
-\listoffigures		% Índice de figuras
-\listoftables		% Índice de tablas
-\lstlistoflistings	% Índice de códigos
-
-% Inicia la numeración habitual.
-\mainmatter
-
-%%%%
-% CONTENIDO. CAPÍTULOS DEL TRABAJO - Añade o elimina según tus necesidades
-%%%%
-\input{capitulos/Introduccion}	% Plantilla: Se muestran contenidos
-\input{capitulos/marcoteorico}	% Plantilla: Se muestran listas
-\input{capitulos/objetivos}		% Plantilla: Se muestran tablas
-\input{capitulos/metodologia}	% Plantilla: Se muestran figuras
-\input{capitulos/desarrollo}		% Plantilla: Se muestran listados
-\input{capitulos/resultados}		% Plantilla: Se muestran gráficas
-\input{capitulos/conclusiones}	% Plantilla: Se muestran matemáticas
-
-%%%%
-% CONTENIDO. BIBLIOGRAFÍA.
-%%%%
-\nocite{*} %incluye TODOS los documentos de la base de datos bibliográfica sean o no citados en el texto
-\bibliography{bibliografia/bibliografia} % Archivo que contiene la bibliografía
-\bibliographystyle{apacite}
-
-%%%%
-% CONTENIDO. LISTA DE ACRÓNIMOS. Comenta las líneas si no lo deseas incluir.
-%%%%
-% Incluye el listado de acrónimos utilizados en el trabajo. 
-\printglossary[style=modsuper,type=\acronymtype,title={Lista de Acrónimos y Abreviaturas}]
-% Añade el resto de acrónimos si así se desea. Si no elimina el comando siguiente
-\glsaddallunused 
-
-%%%%
-% CONTENIDO. Anexos - Añade o elimina según tus necesidades
-%%%%
-\appendix % Inicio de los apéndices
-\input{anexos/anexo_I}
-\input{anexos/anexo_2}
-\input{anexos/anexo_3}
-
+	
+	% Números romanos hasta el mainmatter.
+	\frontmatter
+	
+	% PORTADA
+	\input{include/portada/portada_color} % Portada Color
+	\input{include/portada/portada_bn} % Portada B/N
+	
+	%%%%% PREAMBULO
+	% Incluye el .tex que contiene el preámbulo, agradecimientos y dedicatorias.
+	\input{preambulos/preliminaresconagradecimientos} 
+	
+	% Incluye después del archivo anterior el indice y lista de figuras, tablas y códigos.
+	\setcounter{tocdepth}{1} % Nivel de profundidad
+	\tableofcontents	     % Índice
+	\listoffigures		     % Índice de figuras
+	\listoftables		     % Índice de tablas
+	\lstlistoflistings	     % Índice de códigos
+	
+	% Inicia la numeración habitual.
+	\mainmatter
+	
+	%%%%
+	% CONTENIDO. CAPÍTULOS DEL TRABAJO - Añade o elimina según tus necesidades
+	%%%%
+	\input{capitulos/1_introduccion}	
+	\input{capitulos/2_estado_arte}
+	\input{capitulos/3_analisis}
+	\input{capitulos/4_diseno}
+	\input{capitulos/5_conclusiones}
+	\input{capitulos/_introduccion}	% Plantilla: Se muestran contenidos
+	\input{capitulos/_marcoteorico}	% Plantilla: Se muestran listas
+	\input{capitulos/_objetivos}		% Plantilla: Se muestran tablas
+	\input{capitulos/_metodologia}	% Plantilla: Se muestran figuras
+	\input{capitulos/_desarrollo}		% Plantilla: Se muestran listados
+	\input{capitulos/_resultados}		% Plantilla: Se muestran gráficas
+	\input{capitulos/_conclusiones}	% Plantilla: Se muestran matemáticas
+	
+	%%%%
+	% CONTENIDO. BIBLIOGRAFÍA.
+	%%%%
+	\nocite{*} %incluye TODOS los documentos de la base de datos bibliográfica sean o no citados en el texto
+	\bibliographystyle{unsrtnat}
+	\bibliography{bibliografia/bibliografia} % Archivo que contiene la bibliografía
+	
+	
+	%%%%
+	% CONTENIDO. LISTA DE ACRÓNIMOS. Comenta las líneas si no lo deseas incluir.
+	%%%%
+	% Incluye el listado de acrónimos utilizados en el trabajo. 
+	\printglossary[style=modsuper,type=\acronymtype,title={Lista de Acrónimos y Abreviaturas}]
+	% Añade el resto de acrónimos si así se desea. Si no elimina el comando siguiente
+	\glsaddallunused 
+	
+	%%%%
+	% CONTENIDO. Anexos - Añade o elimina según tus necesidades
+	%%%%
+	\appendix % Inicio de los apéndices
+	\input{anexos/_anexo_I}
+	\input{anexos/_anexo_2}
+	\input{anexos/_anexo_3}
+	
 \end{document}
