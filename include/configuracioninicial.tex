@@ -1,9 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Plantilla TFG/TFM
-% Escuela Politécnica Superior de la Universidad de Alicante
-% Realizado por: Jose Manuel Requena Plens
-% Contacto: info@jmrplens.com / Telegram:@jmrplens
+% Universidad de Murcia. Facultad de Informática
+% Realizado por: José Manuel Requena Plens
+% Modificado: Pablo José Rocamora Zamora
+% Contacto: pablojoserocamora@gmail.com
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % FORMATO DEL DOCUMENTO
@@ -19,12 +21,25 @@
 %%
 % Formato y contenido de la información de cabecera y pie de página
 %%
+
+
 % Información de capítulo en cabecera e interno
 \ihead{{\color{gray30}\scshape\small\headmark}}	
 % Número de página en cabecera y externo
 \ohead{\normalfont\pagemark} 
 % Número de página en pie de página y externo. Sólo en páginas sin cabecera
 \ofoot[\normalfont\pagemark]{}
+
+
+
+% Información de capítulo en cabecera e interno
+% headmark solo se imprime 1 vez, con el consigo que no salga en los capitulos
+%\ihead[{\color{gray30}\scshape\small\headmark}]{{\color{gray30}\scshape\small\leftmark}}
+% Número de página en pie de página y externo. Usar cfoot para centrar
+%\ifoot[\normalfont\pagemark]{\normalfont\pagemark}
+
+
+
 %% 		
 % Edición del contenido de las distintas partes de la cabecera
 %%
@@ -34,8 +49,8 @@
 
 % Añade al índice y numera hasta la profundidad 4.
 % 1:section,2:subsection,3:subsubsection,4:paragraph
-\setcounter{tocdepth}{4}
-\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 % Muestra una regla para comprobar el formato de las páginas
 %\usepackage[type=upperleft,showframe,marklength=8mm]{fgruler}
 % MÁRGENES DE LAS PÁGINAS
@@ -56,7 +71,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 % BIBLIOGRAFÍA
 %%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{apacite} % NORMA APA
+%\usepackage{apacite} % NORMA APA
 \usepackage[numbers,sort]{natbib}
 \usepackage{breakcites}
 
@@ -171,6 +186,8 @@
 \usepackage{framed,mdframed}
 % Para subrayar. Uso: \hlc[tucolor]{tutexto}
 \newcommand{\hlc}[2][yellow]{ {\sethlcolor{#1} \hl{#2}} }
+% Para que el salto de linea funcione sin tener que usar \\
+%\usepackage{parskip}
 
 %%%%%%%%%%%%%%%%%%%%%%%% 
 % OTROS
@@ -184,6 +201,7 @@
 \usepackage{url}
 % Amplia muchas funciones graficas de latex
 \usepackage{graphicx}
+\graphicspath{ {archivos/images/} }
 % Paquete que añade el hipervinculo en referencias dentro del documento, indice, etc
 % Se define sin bordes alrededor. Uso: \ref{tulabel}
 \usepackage[pdfborder={000}]{hyperref}

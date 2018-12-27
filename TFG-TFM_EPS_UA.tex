@@ -1,8 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Plantilla TFG/TFM
-% Escuela Politécnica Superior de la Universidad de Alicante
-% Realizado por: Jose Manuel Requena Plens
-% Contacto: info@jmrplens.com / Telegram:@jmrplens
+% Universidad de Murcia. Facultad de Informática
+% Realizado por: José Manuel Requena Plens
+% Modificado: Pablo José Rocamora Zamora
+% Contacto: pablojoserocamora@gmail.com
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -34,7 +35,27 @@
 \newcommand{\firma}{include/firma}
 
 % Configuración automática según el identificador elegido
-\input{include/configuraciontitulacion} 
+% Grados
+\definecolor{informatica}{RGB}{121,11,21}	% Informatica
+% Colores generales
+\definecolor{negro}{RGB}{0,0,0}
+\definecolor{blanco}{RGB}{255,255,255}
+
+% Logotipos comunes de todas las titulaciones
+\newcommand{\logoFacultadPortada}{include/logos-titulaciones/Simbolo-negativo-sin-fondo}
+\newcommand{\logoGradoPortada}{include/logos-titulaciones/Simbolo-negativo-sin-fondo} 
+\newcommand{\logoUniversidadPortada}{include/logos-universidad/escudo_umu}
+\newcommand{\logoFacultadPortadaBaja}{include/logos-titulaciones/FIUM-postivo-sin-fondo}
+% Logos
+\newcommand{\logoGrado}{include/logos-titulaciones/FI-positivo}
+\newcommand{\logoDepartamento}{include/logos-titulaciones/Logotipo_DIIC}
+\newcommand{\logoUniversidad}{include/logos-universidad/um}
+% Texto
+\newcommand{\miGrado}{Grado en Ingeniería Informática}
+\newcommand{\tipotrabajo}{Trabajo Fin de Grado}
+% Color
+\newcommand{\colorgrado}{informatica}
+\newcommand{\colortexto}{blanco}
 
 % Información añadida a las propiedades del archivo PDF.
 \hypersetup{
@@ -63,17 +84,21 @@
 	
 	%%%%% PREAMBULO
 	% Incluye el .tex que contiene el preámbulo, agradecimientos y dedicatorias.
+	%\setstretch{1.5} % 1.5 línea de interlineado antes esta a 1 para la portada
 	\input{preambulos/preliminaresconagradecimientos} 
 	
+	%\setstretch{1.0} % 1.0 línea de interlineado para los indices
 	% Incluye después del archivo anterior el indice y lista de figuras, tablas y códigos.
-	\setcounter{tocdepth}{1} % Nivel de profundidad
-	\tableofcontents	     % Índice
-	\listoffigures		     % Índice de figuras
-	\listoftables		     % Índice de tablas
-	\lstlistoflistings	     % Índice de códigos
+	\thispagestyle{empty}  % Borra la cabecera por haberla creado mal :)
+	\tableofcontents \thispagestyle{empty}	     	% Índice
+	\listoffigures	\thispagestyle{empty}	     	% Índice de figuras
+	\listoftables	\thispagestyle{empty}	     	% Índice de tablas
+	\lstlistoflistings \thispagestyle{empty}	    % Índice de códigos
 	
 	% Inicia la numeración habitual.
 	\mainmatter
+	
+	%\setstretch{1.5} % 1.5 línea de interlineado
 	
 	%%%%
 	% CONTENIDO. CAPÍTULOS DEL TRABAJO - Añade o elimina según tus necesidades
