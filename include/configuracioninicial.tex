@@ -12,7 +12,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 % scrbook es la clase de documento
 % Si se desea que no haya página en blanco entre capítulos añadir "openany" en los parámetros de la clase. Sino siempre los capítulos empezarán en página impar.
-\documentclass[a4paper,11pt,titlepage]{scrbook}
+\documentclass[a4paper,11pt,titlepage,openany]{scrbook}
 \KOMAoption{toc}{bib,chapterentryfill} % Opciones del índice
 \usepackage{scrhack} % Previene algunos errores
 % Paquete de formato para scrbook. Con marcas, linea-separador superior e inferior
@@ -21,25 +21,12 @@
 %%
 % Formato y contenido de la información de cabecera y pie de página
 %%
-
-
 % Información de capítulo en cabecera e interno
 \ihead{{\color{gray30}\scshape\small\headmark}}	
 % Número de página en cabecera y externo
 \ohead{\normalfont\pagemark} 
 % Número de página en pie de página y externo. Sólo en páginas sin cabecera
-\ofoot[\normalfont\pagemark]{}
-
-
-
-% Información de capítulo en cabecera e interno
-% headmark solo se imprime 1 vez, con el consigo que no salga en los capitulos
-%\ihead[{\color{gray30}\scshape\small\headmark}]{{\color{gray30}\scshape\small\leftmark}}
-% Número de página en pie de página y externo. Usar cfoot para centrar
-%\ifoot[\normalfont\pagemark]{\normalfont\pagemark}
-
-
-
+%\ofoot[\normalfont\pagemark]{}
 %% 		
 % Edición del contenido de las distintas partes de la cabecera
 %%

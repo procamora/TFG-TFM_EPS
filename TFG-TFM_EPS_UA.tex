@@ -85,15 +85,18 @@
 	%%%%% PREAMBULO
 	% Incluye el .tex que contiene el preámbulo, agradecimientos y dedicatorias.
 	%\setstretch{1.5} % 1.5 línea de interlineado antes esta a 1 para la portada
-	\input{preambulos/preliminaresconagradecimientos} 
+	\input{preambulos/preliminaresconagradecimientos}
+	\input{preambulos/1_declaracion_originalidad}
+	\input{preambulos/2_resumen}
+	\input{preambulos/3_extended_abstract}
 	
 	%\setstretch{1.0} % 1.0 línea de interlineado para los indices
 	% Incluye después del archivo anterior el indice y lista de figuras, tablas y códigos.
-	\thispagestyle{empty}  % Borra la cabecera por haberla creado mal :)
-	\tableofcontents \thispagestyle{empty}	     	% Índice
-	\listoffigures	\thispagestyle{empty}	     	% Índice de figuras
-	\listoftables	\thispagestyle{empty}	     	% Índice de tablas
-	\lstlistoflistings \thispagestyle{empty}	    % Índice de códigos
+
+	\tableofcontents     	% Índice
+	\listoffigures	     	% Índice de figuras
+	\listoftables	     	% Índice de tablas
+	\lstlistoflistings 	    % Índice de códigos
 	
 	% Inicia la numeración habitual.
 	\mainmatter
