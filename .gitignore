@@ -12,3 +12,7 @@
 *.tex
 *.toc
 *.synctex.gz
+*.acr
+*.alg
+*.glg
+*.gls
